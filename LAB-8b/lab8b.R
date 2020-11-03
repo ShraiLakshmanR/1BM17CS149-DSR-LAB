@@ -1,0 +1,7 @@
+install.packages('gcookbook')
+install.packages("ggplot2")
+install.packages('dplyr')
+library('dplyr')
+library('ggplot2')
+library('gcookbook')
+ggplot(cabbage_exp,aes(x=Date,y=Weight,fill=Cultivar)) + geom_bar(position="dodge",stat="identity") + geom_text(aes(label=Weight),vjust=1.5, position=position_dodge(.9),size=3,color="white")
